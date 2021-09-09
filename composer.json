@@ -1,0 +1,19 @@
+{
+    "name": "boniface/php-vehicules",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Boniface\\PhpVehicules\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "BONIFACE",
+            "email": "contact@yohannboniface.dev"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "symfony/var-dumper": ">=5.0.0"
+    }
+}
