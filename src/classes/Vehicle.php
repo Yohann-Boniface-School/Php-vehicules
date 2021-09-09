@@ -2,10 +2,18 @@
 
 namespace vehicles\classes;
 
-class Vehicle
+abstract class Vehicle
 {
-    public function __toString(): string
+    protected $plate_id;
+    private $price;
+    private $year;
+    private $id;
+
+    public static $instance_id = 0;
+
+    public function __construct(string $plate_id)
     {
-        return "a vehicle class";
+        $this->plate_id = $plate_id;
+        $this->id = $this::$instance_id++;
     }
 }
