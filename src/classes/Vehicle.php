@@ -11,6 +11,8 @@ abstract class Vehicle
 
     public static $instance_id = 0;
 
+    abstract public function start();
+
     public function __construct(string $plate_id)
     {
         $this->plate_id = $plate_id;
