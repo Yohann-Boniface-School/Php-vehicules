@@ -12,6 +12,7 @@ abstract class Vehicle
     public static $instance_id = 0;
 
     abstract public function start();
+    abstract public function accelerate();
 
     public function __construct(string $plate_id)
     {

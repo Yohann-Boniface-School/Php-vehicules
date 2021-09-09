@@ -7,11 +7,16 @@ class Car extends Vehicle
 
     public function __toString(): string
     {
-        return "Car [$this->plate_id]";
+        return "[$this->plate_id]";
     }
 
     public function start(): void
     {
-        echo "$this has started";
+        echo "Car $this has started";
+    }
+
+    public function accelerate(): void
+    {
+        echo "Car $this accelerate";
     }
 }
