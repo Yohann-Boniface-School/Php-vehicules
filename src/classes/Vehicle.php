@@ -5,8 +5,8 @@ namespace vehicles\classes;
 abstract class Vehicle
 {
     protected $plate_id;
-    private $price;
-    private $year;
+    public $price;
+    public $year;
     private $id;
 
     public static $instance_id = 0;
@@ -14,9 +14,12 @@ abstract class Vehicle
     abstract public function start();
     abstract public function accelerate();
 
-    public function __construct(string $plate_id)
+    public function __construct(string $plate_id, $price, $year)
     {
         $this->plate_id = $plate_id;
         $this->id = $this::$instance_id++;
+
+        $this->price = $price;
+        $this->year = $year;
     }
 }
