@@ -12,6 +12,6 @@ class Car extends Vehicle
 
     public function start(): void
     {
-        echo "The car has started";
+        echo "$this has started";
     }
 }

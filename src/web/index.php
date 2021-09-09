@@ -2,22 +2,10 @@
 
 namespace vehicles\web;
 
-use Faker\Factory;
-use vehicles\classes\Car;
+use vehicles\core\App;
 
 define('ROOT_PATH', dirname(__DIR__, 2));
 require ROOT_PATH . '/vendor/autoload.php';
 
-function get_id_plate(): string
-{
-    $faker = Factory::create();
-    return strtoupper($faker->bothify("??-###-??"));
-}
-
-dd(
-    [
-        new Car(get_id_plate()),
-        new Car(get_id_plate()),
-        new Car(get_id_plate())
-    ]
-);
+$app = new App();
+$app->run();
